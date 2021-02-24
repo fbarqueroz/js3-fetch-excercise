@@ -86,6 +86,8 @@ const actualizarDatos = () => {
         priceElement.innerHTML = `${EUR_INFO.code}${EUR_INFO.symbol} ${EUR_INFO.rate}`;
       }
 
+      actualizarDatos();
+
 
       // Se define la constante para mostrar el tiempo
       const time_info = data.time.updated;
@@ -95,7 +97,5 @@ const actualizarDatos = () => {
       console.log("error", error);
     });
 };
-
-actualizarDatos();
 
 button.addEventListener("click", actualizarDatos);
